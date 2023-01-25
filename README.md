@@ -62,3 +62,10 @@ Existem basicamente duas maneiras de realizar as predições dentro desse métod
 
 Após alguns testes, a melhor performance nas previsões foi alcançada quando os dias de pagamento foram retirados da análise e todas as outras variáveis mantidas. O "Mean Absolute Error" (MAE) obtido foi de 37.45. A figura abaixo mostra a série original e os valores preditos.
 
+![forecast](https://user-images.githubusercontent.com/88217999/214466032-6e7a58d7-619e-42eb-b0ac-1b676dc18d75.png)
+
+## Referências
+
+- Fonte dos dados: https://www.kaggle.com/competitions/store-sales-time-series-forecasting/data
+- Sobre a aplicação de Machine Learning em previsões de séries temporais: https://towardsdatascience.com/ml-time-series-forecasting-the-right-way-cbf3678845ff
+
