@@ -52,4 +52,13 @@ O ponto central da técnica de Machine Learning para a análise de Séries Tempo
 
 Portanto, inicialmente esses atrasos principais são identificados. Têm-se 5 valores de atraso que serão utilizados nos modelos. Ou seja, as vendas em um determinado dia têm como variáveis os valores de venda a 1, 2, 6, 7, e 14 dias atrás.
 
-Além dessas features, de forma geral também são considerados na análise o número de itens em promoção, o preço do petróleo, os feriados e as datas de pagamento do setor público.
+Além dessas features, de forma geral, também são considerados na análise o número de itens em promoção, o preço do petróleo, os feriados e as datas de pagamento do setor público.
+
+## Aplicando o algorítmo XGBoost de regressão na previsão das vendas
+
+O algorítmo XGBoost para regressão é treinado nos dados da série e utilizado para prever as vendas em uma janela de 15 dias. Os 15 dias finais da série não são considerados no treinamento e são utilizados como testes da eficiência do modelo. 
+
+Existem basicamente duas maneiras de realizar as predições dentro desse método. A maneira mais simples é utilizar o modelo já treinado para fazer previsões em todas as datas selecionadas para testes. A outra maneira é realizar uma previsão na primeira data do conjunto de testes e então incluir o resultado da predição nas tabelas e retreinar o modelo para a próxima predição. Esse processo é repetido até a data final do conjunto de testes. Aqui será utilizado o primeiro procedimento.
+
+Após alguns testes, a melhor performance nas previsões foi alcançada quando os dias de pagamento foram retirados da análise e todas as outras variáveis mantidas. O "Mean Absolute Error" (MAE) obtido foi de 37.45. A figura abaixo mostra a série original e os valores preditos.
+
