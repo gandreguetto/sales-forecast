@@ -17,3 +17,7 @@ Uma vez calculadas as autocorrelações parciais, os atrasos ("lags") que geram 
 Uma das principais vantagens dessa técnica é que váriaveis podem ser incluídas na análise de uma série temporal de forma relativamente simples. Outra vantagem importante é a possibilidade de se utilizar os diversos algorítmos de Machine Learning existentes.  
 
 Aqui, o algorítmo XGBoost será utilizado no problema de regressão para se prever as vendas em uma janela de 15 dias. Conforme será visto, as melhores previsões são obtidas quando as "features" mencionadas acima são utilizadas excluindo-se os dias de pagamento.
+
+## A série de vendas
+
+Antes do pré-processamento a série temporal de vendas da família "HOME CARE" da loja 41 tem o comportamento ilustrado na figura abaixo.
