@@ -1,4 +1,4 @@
-# Aplicando Machine Learning na análise da série temporal de vendas da loja equatoriana "Favorita"
+# Aplicando Machine Learning na análise das séries temporais de vendas da loja equatoriana "Favorita"
 
 ## Uma visão geral sobre o problema e as técnicas utilizadas
 
