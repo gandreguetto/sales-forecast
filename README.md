@@ -26,3 +26,16 @@ Antes do pré-processamento a série temporal de vendas da família "HOME CARE" 
 
 Após a eliminação da parte inicial, onde existem longos períodos sem vendas, e do outlier com venda muito acima da média, a série se comporta conforme ilustrado na figura abaixo.
 
+![time_series_2](https://user-images.githubusercontent.com/88217999/214461472-b2f89157-828b-46bb-a885-2f2ba72cd308.png)
+
+## As funções de autocorrelação e autocorrelação parcial
+
+A função de autocorrelação (ou, do inglês, acf) calcula a correlação dos dados com os próprios dados da série em períodos anteriores. 
+
+Na imagem abaixo, o pacote statsmodels é utilizado para vizualizar a acf da série. Nesse caso, foi escolhida a opção de mostrar as correlações para um período de até 40 dias. 
+
+Na imagem, observa-se a correlação trivial com o período anterior ("lag") de zero dias, que é obviamente igual a 1. Ou seja, o coeficiente de correlação das vendas de um dia com esse mesmo dia é igual a 1, como esperado.   
+
+Existem correlações positivas com "lags" de 1, 6, 7, 8, 13, 14, 15, 20, 21, 22 ... dias. E correlações negativas ocorrem nos "lags" de 2, 3, 4, 5, 9, 10, 11, 12, ... dias. Nota-se uma forte correlação com as vendas de 7 dias atrás, indicando uma forte dependência nas vendas com o dia da semana. Essa dependência com o dia da semana ainda é responsável pelo padrão periódico observado. 
+
+Para selecionar somente os "lags" principais dentro desse padrão periódico é utilizada a função de autocorrelação parcial (que muitas vezes é escrita pela sigla em inglês pacf). Mais abaixo o pacote statsmodels é novamente utilizado para produzir o gráfico da pacf da série. Na figura fica bastante claro a atenuação dos valores da correlação conforme avança-se no padrão repetitivo.   
