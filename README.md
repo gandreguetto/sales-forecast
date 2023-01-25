@@ -38,4 +38,7 @@ Na imagem, observa-se a correlação trivial com o período anterior ("lag") de 
 
 Existem correlações positivas com "lags" de 1, 6, 7, 8, 13, 14, 15, 20, 21, 22 ... dias. E correlações negativas ocorrem nos "lags" de 2, 3, 4, 5, 9, 10, 11, 12, ... dias. Nota-se uma forte correlação com as vendas de 7 dias atrás, indicando uma forte dependência nas vendas com o dia da semana. Essa dependência com o dia da semana ainda é responsável pelo padrão periódico observado. 
 
-Para selecionar somente os "lags" principais dentro desse padrão periódico é utilizada a função de autocorrelação parcial (que muitas vezes é escrita pela sigla em inglês pacf). Mais abaixo o pacote statsmodels é novamente utilizado para produzir o gráfico da pacf da série. Na figura fica bastante claro a atenuação dos valores da correlação conforme avança-se no padrão repetitivo.   
+Para selecionar somente os "lags" principais dentro desse padrão periódico é utilizada a função de autocorrelação parcial (que muitas vezes é escrita pela sigla em inglês pacf). Mais abaixo o pacote statsmodels é novamente utilizado para produzir o gráfico da pacf da série. Na figura fica bastante claro a atenuação dos valores da correlação conforme avança-se no padrão repetitivo. 
+
+![acf](https://user-images.githubusercontent.com/88217999/214462382-bd0a8581-c39e-4233-a2e8-2a9a1440b8c8.png)
+
