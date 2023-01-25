@@ -40,8 +40,16 @@ Existem correlações positivas com "lags" de 1, 6, 7, 8, 13, 14, 15, 20, 21, 22
 
 Para selecionar somente os "lags" principais dentro desse padrão periódico é utilizada a função de autocorrelação parcial (que muitas vezes é escrita pela sigla em inglês pacf). Mais abaixo o pacote statsmodels é novamente utilizado para produzir o gráfico da pacf da série. Na figura fica bastante claro a atenuação dos valores da correlação conforme avança-se no padrão repetitivo. 
 
-![acf](https://user-images.githubusercontent.com/88217999/214462382-bd0a8581-c39e-4233-a2e8-2a9a1440b8c8.png)
-
 ![acf](https://user-images.githubusercontent.com/88217999/214462822-f907cc15-943d-4510-a267-94a90b12751f.png)
 
+![pacf](https://user-images.githubusercontent.com/88217999/214462508-efe94120-77a6-4bac-9a62-37349f870b48.png)
 
+Os "lags" principais, que serão utilizados no modelo de Machine Learning, são selecionados como aqueles com valor absoluto de autocorrelação maior do que 0.2. Na figura acima a linha cinza horizontal indica esse limiar.  
+
+## Construindo o dataframe para a aplicação das técnicas de Machine Learning
+
+O ponto central da técnica de Machine Learning para a análise de Séries Temporais que é utilizada aqui consiste em transformar os atrasos ("lags") principais em "features" para o aprendizado. 
+
+Portanto, inicialmente esses atrasos principais são identificados. Têm-se 5 valores de atraso que serão utilizados nos modelos. Ou seja, as vendas em um determinado dia têm como variáveis os valores de venda a 1, 2, 6, 7, e 14 dias atrás.
+
+Além dessas features, de forma geral também são considerados na análise o número de itens em promoção, o preço do petróleo, os feriados e as datas de pagamento do setor público.
