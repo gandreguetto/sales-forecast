@@ -42,3 +42,5 @@ Para selecionar somente os "lags" principais dentro desse padrão periódico é 
 
 ![acf](https://user-images.githubusercontent.com/88217999/214462382-bd0a8581-c39e-4233-a2e8-2a9a1440b8c8.png)
 
+![pacf](https://user-images.githubusercontent.com/88217999/214462508-efe94120-77a6-4bac-9a62-37349f870b48.png)
+
