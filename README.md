@@ -21,3 +21,8 @@ Aqui, o algorítmo XGBoost será utilizado no problema de regressão para se pre
 ## A série de vendas
 
 Antes do pré-processamento a série temporal de vendas da família "HOME CARE" da loja 41 tem o comportamento ilustrado na figura abaixo.
+
+![time_series_1](https://user-images.githubusercontent.com/88217999/214460691-c7875ebb-5679-4ed5-8c81-31a9a4c78eed.png)
+
+Após a eliminação da parte inicial, onde existem longos períodos sem vendas, e do outlier com venda muito acima da média, a série se comporta conforme ilustrado na figura abaixo.
+
